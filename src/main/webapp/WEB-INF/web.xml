@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+	id="WebApp_ID" version="4.0">
+	<display-name>web</display-name>
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+
+	<servlet>
+		<servlet-name>ForumTopicServlet</servlet-name>
+		<servlet-class>web.controllers.ForumTopicServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ForumTopicServlet</servlet-name>
+		<url-pattern>/forum</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>ForumTopicSubServlet</servlet-name>
+		<servlet-class>web.controllers.ForumTopicSubServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ForumTopicSubServlet</servlet-name>
+		<url-pattern>/forumSub</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>ForumContentServlet</servlet-name>
+		<servlet-class>web.controllers.ForumContentServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ForumContentServlet</servlet-name>
+		<url-pattern>/forumContent</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>CommentServlet</servlet-name>
+		<servlet-class>web.controllers.CommentServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>CommentServlet</servlet-name>
+		<url-pattern>/postComment</url-pattern>
+	</servlet-mapping>
+
+</web-app>
